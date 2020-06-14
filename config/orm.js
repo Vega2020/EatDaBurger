@@ -7,7 +7,7 @@ const connection = require("connection.js");
 // insertOne()
 // updateOne()
 
-// BEGIN CODE BLOCK FROM CLASS ACTIVITY:
+// BEGIN CODE BLOCK FROM CLASS ACTIVITY 13-17:
 
 // Helper function for SQL syntax.
 // Let's say we want to pass 3 values into the mySQL query.
@@ -49,6 +49,7 @@ function printQuestionMarks(num) {
   
   // Object for all our SQL statement functions.
   var orm = {
+      //this corresponds to the selectAll() function in the activity instructions
     all: function(tableInput, cb) {
       var queryString = "SELECT * FROM " + tableInput + ";";
       connection.query(queryString, function(err, result) {
@@ -58,6 +59,7 @@ function printQuestionMarks(num) {
         cb(result);
       });
     },
+    //this corresponds to the insertOne() function in the activity instructions?
     create: function(table, cols, vals, cb) {
       var queryString = "INSERT INTO " + table;
   
@@ -79,6 +81,7 @@ function printQuestionMarks(num) {
       });
     },
     // An example of objColVals would be {name: panther, sleepy: true}
+    //this corresponds to the update function in the activity instructions?
     update: function(table, objColVals, condition, cb) {
       var queryString = "UPDATE " + table;
   
@@ -110,7 +113,7 @@ function printQuestionMarks(num) {
       });
     }
   };
-// END CODE BLOCK FROM CLASS ACTIVITY
+// END CODE BLOCK FROM CLASS ACTIVITY 13-17
 
 
 // Export the ORM object in `module.exports`.
