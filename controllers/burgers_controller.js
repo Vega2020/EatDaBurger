@@ -6,7 +6,9 @@ const router = express.Router();
 const burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
+// when the server receives a .get ending in /,
 router.get("/", function(req, res) {
+  //it executes the burger.selectAll function with the data
   burger.selectAll(function(data) {
     var hbsObject = {
       burgers: data
@@ -18,10 +20,10 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res) {
   burger.insertOne([
-      // NOTE - "sleepy" has to be replaced with "eaten"
-    "name", "sleepy"
+      // NOTE - "sleepy" has been replaced with "eaten"
+    "name", "eaten"
   ], [
-    req.body.name, req.body.sleepy
+    req.body.name, req.body.eaten
   ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
@@ -34,7 +36,7 @@ router.put("/api/burgers/:id", function(req, res) {
   console.log("condition", condition);
 
   burger.updateOne({
-    sleepy: req.body.sleepy
+    eaten: req.body.eaten
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404

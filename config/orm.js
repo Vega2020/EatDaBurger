@@ -1,5 +1,5 @@
 // import connection.js
-const connection = require("connection.js");
+const connection = require("./connection.js");
 
 // create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
 
@@ -38,7 +38,7 @@ function printQuestionMarks(num) {
           value = "'" + value + "'";
         }
         // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-        // e.g. {sleepy: true} => ["sleepy=true"]
+        // e.g. {eaten: true} => ["eaten=true"]
         arr.push(key + "=" + value);
       }
     }
