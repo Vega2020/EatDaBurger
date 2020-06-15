@@ -8,6 +8,9 @@
 
 //STEPS:
 
+//require jquery
+const jquery = require("jquery");
+
 //require express
 var express = require("express");
 
@@ -32,6 +35,10 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgers_controller.js");
 
 app.use(routes);
+
+// require the burgers and tell the file to use it. not sure this will work.
+var burgers = require("./public/assets/js/burgers.js");
+app.use(burgers);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
