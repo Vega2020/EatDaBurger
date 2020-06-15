@@ -49,8 +49,8 @@ function printQuestionMarks(num) {
   
   // Object for all our SQL statement functions.
   var orm = {
-      //this corresponds to the selectAll() function in the activity instructions
-    all: function(tableInput, cb) {
+      //this corresponds to the selectAll() function in the activity instructions - just changed name from "all" to "selectall"
+    selectAll: function(tableInput, cb) {
       var queryString = "SELECT * FROM " + tableInput + ";";
       connection.query(queryString, function(err, result) {
         if (err) {
@@ -59,8 +59,8 @@ function printQuestionMarks(num) {
         cb(result);
       });
     },
-    //this corresponds to the insertOne() function in the activity instructions?
-    create: function(table, cols, vals, cb) {
+    //this corresponds to the insertOne() function in the activity instructions? Changed name from "create" to "insertOne".
+    insertOne: function(table, cols, vals, cb) {
       var queryString = "INSERT INTO " + table;
   
       queryString += " (";
@@ -81,8 +81,8 @@ function printQuestionMarks(num) {
       });
     },
     // An example of objColVals would be {name: panther, sleepy: true}
-    //this corresponds to the update function in the activity instructions?
-    update: function(table, objColVals, condition, cb) {
+    //this corresponds to the update function in the activity instructions? Changed from update to updateOne.
+    updateOne: function(table, objColVals, condition, cb) {
       var queryString = "UPDATE " + table;
   
       queryString += " SET ";
