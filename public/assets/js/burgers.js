@@ -1,20 +1,20 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".change-eaten").on("click", function(event) {
+    $(".change-devoured").on("click", function(event) {
       var id = $(this).data("id");
-      var newEaten = $(this).data("neweaten");
+      var newDevoured = $(this).data("newdevoured");
   
-      var newEatenState = {
-        eaten: newEat
+      var newDevouredState = {
+        devoured: newDevoured
       };
   
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: newEatenState
+        data: newDevouredState
       }).then(
         function() {
-          console.log("changed eaten to", newEaten);
+          console.log("changed eaten to", newDevoured);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -27,7 +27,7 @@ $(function() {
   
       var newBurger = {
         name: $("#ca").val().trim(),
-        eaten: $("[name=eaten]:checked").val().trim()
+        devoured: $("[name=devoured]:checked").val().trim()
       };
   
       // Send the POST request.
@@ -60,5 +60,5 @@ $(function() {
   });
 
   //export this??????
-//commented out because corresponding file from catsapp does NOT have one of these
+//commented out because corresponding file from catsapp does NOT have one of these, seems like it was causing a problem because the code works without it
   //module.exports = burgers;
