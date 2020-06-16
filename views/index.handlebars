@@ -2,16 +2,6 @@
 
 <h1>Burgers!</h1>
 
-<h2>Burgers that have been eaten!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
 <h2>Burgers that have not been eaten!</h2>
 
 <ul>
@@ -22,12 +12,24 @@
   {{/each}}
 </ul>
 
+<h2>Burgers that have been eaten!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+{{!-- Create a button in `index.handlebars` that will submit the user input into the database. --}}
+
 <h2>Add a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
     <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    <input type="text" id="ca" name="burger_name">
   </div>
 
   <div class="form-group">
@@ -38,5 +40,3 @@
 
   <button type="submit">Add Burger</button>
 </form>
-
-{{!-- Create a button in `index.handlebars` that will submit the user input into the database. --}}

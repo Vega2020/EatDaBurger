@@ -26,7 +26,7 @@ $(function() {
       event.preventDefault();
   
       var newBurger = {
-        burger_name: $("#ca").val().trim(),
+        name: $("#ca").val().trim(),
         devoured: $("[name=devoured]:checked").val().trim()
       };
   
@@ -36,7 +36,6 @@ $(function() {
         data: newBurger
       }).then(
           function() {
-            console.log(newBurger);
           console.log("created new burger");
           // Reload the page to get the updated list
           location.reload();
@@ -59,7 +58,3 @@ $(function() {
       );
     });
   });
-
-  //export this??????
-//commented out because corresponding file from catsapp does NOT have one of these, seems like it was causing a problem because the code works without it
-  //module.exports = burgers;
