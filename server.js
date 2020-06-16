@@ -8,15 +8,16 @@
 
 //STEPS:
 
-//require jquery
-const jquery = require("jquery");
-
 //require express
 var express = require("express");
 
 var PORT = process.env.PORT || 8080;
 
 var app = express();
+
+// require the burgers and tell the file to use it. not sure this will work.
+// var burgers = require("./public/assets/js/burgers.js");
+// app.use(burgers);
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
@@ -36,9 +37,6 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use(routes);
 
-// require the burgers and tell the file to use it. not sure this will work.
-var burgers = require("./public/assets/js/burgers.js");
-app.use(burgers);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {

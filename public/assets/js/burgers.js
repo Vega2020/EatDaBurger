@@ -1,9 +1,3 @@
-
-//add jquery
-const { JSDOM } = require( "jsdom" );
-const { window } = new JSDOM( "" );
-const $ = require( "jquery" )( window );
-
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
     $(".change-eaten").on("click", function(event) {
@@ -65,5 +59,6 @@ $(function() {
     });
   });
 
-  //export this
-  module.exports = burgers;
+  //export this??????
+//commented out because corresponding file from catsapp does NOT have one of these
+  //module.exports = burgers;
