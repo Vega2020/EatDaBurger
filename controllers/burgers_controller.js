@@ -20,7 +20,7 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res) {
   burger.insertOne([
-      // NOTE - "sleepy" has been replaced with "eaten"
+      // NOTE - "sleepy" has been replaced with "devoured"
     "burger_name", "devoured"
   ], [
     req.body.name, 0
