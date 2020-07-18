@@ -3,12 +3,11 @@
 ## By: Jeremy Flowers
         
 Table of Contents:
-[Project Description](Project Description)
-[Installation](Installation)
-[Usage](Usage)
+[Overview](Overview)  
+[Installation](Installation)  
+[Usage](Usage)  
         
-        
-## Project Description:
+## Overview:
 EatDaBurger is a simple app that saves user entries (burgers) to an SQL server and allows the user to change their status (from eaten to not eaten). The project is intended to be a demonstration of handlebars templating to dynamically generate html pages and deployment of a functional web app.
         
 ## Installation:
