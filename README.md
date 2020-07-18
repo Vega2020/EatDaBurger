@@ -1,17 +1,19 @@
 
 # *EatDaBurger*
 ## By: Jeremy Flowers
+With help from U of A
         
 Table of Contents:
 [Overview](Overview)  
 [Installation](Installation)  
-[Usage](Usage)  
+[Usage](Usage) 
+        
         
 ## Overview:
-EatDaBurger is a simple app that saves user entries (burgers) to an SQL server and allows the user to change their status (from eaten to not eaten). The project is intended to be a demonstration of handlebars templating to dynamically generate html pages and deployment of a functional web app.
+This is a full stack web app that uses a mongo database to allow users to create entries (burgers) and change their status (from not eaten to eaten and back again) through a front end interface.
         
-## Installation:
-EatDaBurger is meant to be accessed through Heroku by visiting its deployment page at https://radiant-river-09328.herokuapp.com.
+## Installation:  
+This app is deployed online and meant to be accessed via Heroku at https://thawing-shore-71367.herokuapp.com/.
         
-## Usage:
-Enter a burger in the text field. Choose whether the burger has been devoured or not. Click the add button and the burger will be added to the database! It will appear in the "devoured" or "not devoured" box. Users can move a burger from box to box by clicking the button next to its name and delete it by clicking the "delete" button next to it.
+## Usage:  
+After visiting the deployment page, users will be able to enter new burgers and move them from one category to the other by clicking the appropriate buttons.
